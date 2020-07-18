@@ -6,8 +6,9 @@ const recursion = (target, arr) => {
     arr.unshift(0);
     return !target.length ? [1, ...arr] : recursion(target, arr);
   }
-    arr.unshift(sum);return [...target, ...arr];
-}
+  arr.unshift(sum);
+  return [...target, ...arr];
+};
 
 const plusOne = (digits) => {
   return recursion([...digits], []);
