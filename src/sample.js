@@ -1,1 +1,3 @@
-var foo = 'hello';
+const foo = 'hello';
+
+console.log(foo)
