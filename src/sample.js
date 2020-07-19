@@ -11,5 +11,6 @@ const recursion = (target, arr) => {
 };
 
 const plusOne = (digits) => {
+  console.log('hello');
   return recursion([...digits], []);
 };
