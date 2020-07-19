@@ -8,9 +8,11 @@ const recursion = (target, arr) => {
   }
   arr.unshift(sum);
   console.log('hi');
+
   return [...target, ...arr];
 };
 
 const plusOne = (digits) => {
+  console.log('hello world');
   return recursion([...digits], []);
 };
