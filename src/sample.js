@@ -7,6 +7,7 @@ const recursion = (target, arr) => {
     return !target.length ? [1, ...arr] : recursion(target, arr);
   }
   arr.unshift(sum);
+  console.log('hey');
   return [...target, ...arr];
 };
 
