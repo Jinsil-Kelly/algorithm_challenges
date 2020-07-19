@@ -7,10 +7,13 @@ const recursion = (target, arr) => {
     return !target.length ? [1, ...arr] : recursion(target, arr);
   }
   arr.unshift(sum);
+  console.log('hi');
+
   return [...target, ...arr];
 };
 
 const plusOne = (digits) => {
   console.log('hello');
+  console.log('hello world');
   return recursion([...digits], []);
 };
