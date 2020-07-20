@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/plus-one/
+// https://leetcode.com/problems/reverse-integer/
 
 const checkRange = (num) => {
   const MIN = (-2) ** 31;
