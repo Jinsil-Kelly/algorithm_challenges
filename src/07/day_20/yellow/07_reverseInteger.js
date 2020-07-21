@@ -3,6 +3,8 @@
 const reverse = function (x) {
   const inputStr = x.toString().split('');
   const resultArr = [];
+  const MIN = (-2) ** 31;
+  const MAX = 2 ** 31 - 1;
 
   if (inputStr[0] === '-') {
     resultArr.push('-');
@@ -16,7 +18,7 @@ const reverse = function (x) {
   }
   const resultNum = parseInt(resultArr.join(''), 10);
 
-  if ((-2) ** 31 > resultNum || 2 ** 31 - 1 < resultNum) {
+  if (MAX > resultNum || MIN < resultNum) {
     return 0;
   }
   return resultNum;
