@@ -24,7 +24,7 @@ const smallerNumbersThanCurrent = (nums) => {
   return result;
 };
 
-const testNums = [8, 1, 2, 2, 3];
-
-console.log(smallerNumbersThanCurrent(testNums));
-console.log(smallerNumbersThanCurrent(testNums));
+// const testNums = [8, 1, 2, 2, 3];
+//
+// console.log(smallerNumbersThanCurrent(testNums));
+// console.log(smallerNumbersThanCurrent(testNums));
