@@ -21,3 +21,8 @@ const defangIPaddr = (address) => {
   }
   return result;
 };
+
+// Solution 3
+const defang = (address) => {
+  return address.replace(/[.]/g, '[.]');
+};
