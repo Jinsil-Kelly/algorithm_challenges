@@ -14,6 +14,4 @@ const recursion = (target, depth) => {
   return arr.length ? recursion(arr, maxDepth) : maxDepth;
 };
 
-const maxDepth = (root) => {
-  return root ? recursion([root], 0) : 0;
-};
+const maxDepth = (root) => (root ? recursion([root], 0) : 0);
