@@ -1,5 +1,6 @@
 // it is very simlar to the two number sum
 // the only difference is that you have to return the array of three numbers which their sum match with target value.
+// futher details will be updated later
 
 // O(n^2) | O(n) space
 exports.threeNumberSum = (nums, target) => {
