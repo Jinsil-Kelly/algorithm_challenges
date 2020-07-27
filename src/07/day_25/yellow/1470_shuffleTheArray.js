@@ -6,10 +6,10 @@ const shuffle = function (nums, n) {
   const result = [];
 
   for (let i = 0; i < nums.length; i += 1) {
-    if (i % 2 === 0) {
-      result.push(xArr.shift());
-    } else {
+    if (i % 2) {
       result.push(yArr.shift());
+    } else {
+      result.push(xArr.shift());
     }
   }
   return result;
