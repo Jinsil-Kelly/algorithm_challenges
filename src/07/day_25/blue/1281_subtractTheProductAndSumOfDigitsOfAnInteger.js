@@ -3,8 +3,16 @@
 // Solution 1
 const subtractProductAndSum1 = (n) => {
   const numArr = n.toString().split('');
-  const product = numArr.reduce((acc, cur) => Number(acc) * Number(cur));
-  const sum = numArr.reduce((acc, cur) => Number(acc) + Number(cur));
+
+  const calculate = (arr, instruction) =>
+    arr.reduce((acc, cur) =>
+      instruction === 'product'
+        ? Number(acc) * Number(cur)
+        : Number(acc) + Number(cur),
+    );
+
+  const product = calculate(numArr, 'product');
+  const sum = calculate(numArr, 'sum');
   return product - sum;
 };
 
