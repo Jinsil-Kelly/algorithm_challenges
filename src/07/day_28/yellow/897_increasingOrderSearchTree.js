@@ -2,24 +2,25 @@
 
 const increasingBST = function (root) {
   let newRoot = null;
-  let newTree = null;
+  let output = null;
+  if (!root) return null;
 
-  const helper = (node) => {
+  function inorder(node) {
     if (!node) return;
-    helper(node.left);
+    inorder(node.left);
 
-    if (!newRoot) {
+    if (!output) {
+      output = node;
       newRoot = node;
-      newTree = node;
     } else {
-      newTree.right = node;
-      newTree = newTree.right;
+      newRoot.right = node;
+      newRoot = newRoot.right;
     }
-    helper(node.right);
-  };
+    inorder(node.right);
+  }
 
-  helper(root);
-  return newRoot;
+  inorder(root);
+  return output;
 };
 
 // const treeNode = {
