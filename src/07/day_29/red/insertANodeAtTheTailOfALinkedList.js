@@ -6,11 +6,11 @@ function insertNodeAtTail(head, data) {
   if (!head) return linkedList;
 
   function recursion(node) {
-    if (!node.next) {
-      // eslint-disable-next-line no-param-reassign
-      node.next = linkedList;
+    const n = node;
+    if (!n.next) {
+      n.next = linkedList;
     } else {
-      recursion(node.next);
+      recursion(n.next);
     }
   }
 
