@@ -7,7 +7,7 @@ const balancedStringSplit = (string) => {
   for (let i = 0; i < string.length; i += 1) {
     const s = string[i];
 
-    if (balance === 0) result += 1;
+    if (!balance) result += 1;
     if (s === 'L') balance += 1;
     else balance -= 1;
   }
