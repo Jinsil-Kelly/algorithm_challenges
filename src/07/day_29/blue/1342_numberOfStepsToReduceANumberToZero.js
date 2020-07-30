@@ -1,17 +1,12 @@
 // https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
 
 // Solution 1
-const numberOfSteps1 = (num) => {
+const numberOfSteps = (num) => {
   let count = 0;
   let targetNum = num;
   while (targetNum) {
-    if (targetNum % 2 === 0) {
-      targetNum /= 2;
-      count += 1;
-    } else {
-      targetNum -= 1;
-      count += 1;
-    }
+    targetNum = targetNum % 2 ? (targetNum -= 1) : (targetNum /= 2);
+    count += 1;
   }
   return count;
 };
