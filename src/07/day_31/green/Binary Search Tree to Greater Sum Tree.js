@@ -1,7 +1,7 @@
 // http://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/
 function bstToGst(root) {
   function dfs(node, arr) {
-    if (node == null) return;
+    if (node === null) return;
     dfs(node.left, arr);
     arr.push(node);
     dfs(node.right, arr);
