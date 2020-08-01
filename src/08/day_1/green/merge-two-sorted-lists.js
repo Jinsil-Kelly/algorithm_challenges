@@ -14,13 +14,3 @@ function mergeTwoLists(l1, l2) {
 }
 
 mergeTwoLists();
-
-// /*const mergeTwoLists = function(l1, l2) {
-//   if (!l1 || !l2)
-//   return l1 || l2;
-//   const linkThem = (smaller, greater) => {
-//        mergeTwoLists(smaller.next, greater);
-//       return smaller;
-//   };
-//   return l1.val < l2.val ? linkThem(l1,l2) : linkThem(l2,l1);
-// };
