@@ -15,4 +15,4 @@ function bstToGst(root) {
   return root;
 }
 
-bstToGst();
+
