@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/merge-two-sorted-lists/
 function mergeTwoLists(l1, l2) {
   if (l1 === null) return l2;
   if (l2 === null) return l1;
@@ -12,5 +13,3 @@ function mergeTwoLists(l1, l2) {
 
   return node;
 }
-
-mergeTwoLists();

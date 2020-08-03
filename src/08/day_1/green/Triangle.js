@@ -1,4 +1,4 @@
-// triangle
+// https://leetcode.com/problems/triangle/
 function minimumTotal(triangle) {
   const x = triangle.length;
   for (let y = x - 2; y >= 0; y -= 0) {
@@ -9,5 +9,3 @@ function minimumTotal(triangle) {
   }
   return triangle[0][0];
 }
-
-minimumTotal();
