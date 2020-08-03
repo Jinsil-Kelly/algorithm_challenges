@@ -11,4 +11,3 @@ function sumNumbers(nums, target) {
     }
   }
 }
-sumNumbers();
