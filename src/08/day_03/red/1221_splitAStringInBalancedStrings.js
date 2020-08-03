@@ -1,7 +1,6 @@
 // https://leetcode.com/problems/split-a-string-in-balanced-strings/
 
 const balancedStringSplit = (s) => {
-  const R = 'R';
   const L = 'L';
   let arrR = [];
   let arrL = [];
