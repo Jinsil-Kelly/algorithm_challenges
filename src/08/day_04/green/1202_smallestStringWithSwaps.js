@@ -1,42 +1,47 @@
-//https://leetcode.com/problems/smallest-string-with-swaps/
+// https://leetcode.com/problems/smallest-string-with-swaps/
 
-const smallestStringWithSwaps = function(s,pairs){
-    let set  = Array(s.length).fill(-1)
-    function union(a,b){
-        let r1 = find(a)
-        let r2 = find(b)
-        if(r1 !== r2){
-            set[r2] = r1
-        }
-    }
-    function find(a){
-        if(set[a] < 0){
-            return a
-        }
-        else{
-            return(set[a] = find(set[a]))
-        }
-    }
-    for(let p of pairs){
-        union(p[0],p[1])
-    }
-    let gs = []
-    for(let x = 0; x < s.length; x += 0){
-        gs[x] = []
-    }
-    for (let x = 0; x < s.length; x += 0) {
-        gs[find(x)].push(x)
-      }// find ==> push
-    let sArr = s.split('')
-    for(let x = 0; x < s.length; x += 0){
-        if(gs[x].length > 1){
-            let chars = gs[x].map(idx => s[idx])
-            chars.sort()
-            for(let k = 0; k < gs[x].length; k += 0){
-                sArr[gs[x][k]] = chars[k]
-            }
-            
-        }
-    }
-    return sArr.join('')
+ const smallestStringWithSwaps = (s, pairs) => {
+  const m = new Map();
+  const find = (z) => {
+      if (!m.has(z)) {
+          m.set(z, z);
+      } else {
+          while (m.get(z) !== z) {
+              m.set(z, m.get(m.get(z))) ;
+          }
+      }
+      return z;
+  };
+  const union = (a,b) => {
+      const x = find(a);
+      const y = find(b);
+      m.set(x, y);
+        union(x[a],y[b]);
+  };
+  const map = new Map();
+  Array.from(m.keys()).forEach(k => {
+      const ki = find(k);
+      if (map.has(k)) {
+          const val = map.get(ki);
+          val.push(s[k]);
+          map.set(ki, val);
+      } else {
+          map.set(ki, [s[k]]);
+      }
+  });
+  const val = []
+  Array.from(map.keys()).forEach(k => {
+      map.get(k);
+      map.sort(k);
+      map.set(k, val);
+  });
+  for (const i = 0; i < s.length;) {
+      const k = find(i);
+      if (map.has(k)) {
+          const vals = map.get(k);
+          vals.shift();
+          map.set(k, vals);
+          const settings = s.substring(0, i) + val + s.substring(i + 1);
+      }
+  }
 }
