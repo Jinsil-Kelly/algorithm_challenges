@@ -6,9 +6,7 @@ const balancedStringSplitSolution1 = (s) => {
   let count = 0;
 
   for (let i = 0; i < s.length; i += 1) {
-    const char = s[i];
-
-    if (char === L) {
+    if (s[i] === L) {
       balance += 1;
     } else {
       balance -= 1;
