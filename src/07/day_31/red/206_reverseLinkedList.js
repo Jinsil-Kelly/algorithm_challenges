@@ -7,3 +7,15 @@ const reverseList = (head, previous = null) => {
   node.next = previous;
   return reverseList(next, node);
 };
+
+// const reverseList = (head)=> {
+//   if(!head) return head;
+//
+//   const recursion = (node, newHead)=>{
+//     const newNode = new ListNode(node.val,newHead)
+//     if(!node.next) return newNode;
+//     return recursion(node.next, newNode)
+//   }
+//   return recursion(head,null)
+//
+// };

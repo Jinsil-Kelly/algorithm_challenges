@@ -14,5 +14,3 @@ function bstToGst(root) {
   }
   return root;
 }
-
-
