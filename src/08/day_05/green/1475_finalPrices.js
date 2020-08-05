@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
 const finalPrices = (prices) => {
   for (let x = 0; x < prices.length; x += 0) {
     let dis = 0;
