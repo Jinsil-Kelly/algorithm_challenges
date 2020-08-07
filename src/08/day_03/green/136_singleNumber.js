@@ -1,12 +1,12 @@
 // https://leetcode.com/problems/single-number/
 
-const singleNumber = (nums) =>{
-    while(nums.indexOf(nums[0] , 1) > -1){
-        nums.push(nums.shift());
-    }
+const singleNumber = (nums) => {
+  while (nums.indexOf(nums[0], 1) > -1) {
+    nums.push(nums.shift());
+  }
 
-    return nums[0];
-}
+  return nums[0];
+};
 
 // compact under code
 // const singleNumber  = (nums) =>{
