@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/single-number/
+// https://leetcode.com/problems/destination-city/
 const destCity = function (paths) {
   const pathmap = paths.reduce((map, [s, e]) => map.set(s, e), new Map());
   let destination = paths[0][0];
