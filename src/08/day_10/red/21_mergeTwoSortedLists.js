@@ -1,5 +1,19 @@
 // https://leetcode.com/problems/merge-two-sorted-lists/
 
+const betterMergeTwoLists = (l1, l2) => {
+  if (!l1 || !l2) return l1 || l2;
+  let list = l2;
+
+  if (l1.val < l2.val) {
+    list = l1;
+    list.next = betterMergeTwoLists(list.next, l2);
+    return list;
+  }
+  list.next = betterMergeTwoLists(l1, list.next);
+  return list;
+};
+
+//-----------------------------------------------------------
 function ListNode(val, next) {
   this.val = val === undefined ? 0 : val;
   this.next = next === undefined ? null : next;
