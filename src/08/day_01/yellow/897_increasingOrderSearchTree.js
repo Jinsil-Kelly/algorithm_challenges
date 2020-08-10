@@ -1,27 +1,28 @@
 // https://leetcode.com/problems/increasing-order-search-tree/
 const increasingBST = function (root) {
-    let newRoot = null, newTree = null;
+  let newRoot = null;
+    let newTree = null;
 
-    const helper = (node) => {
-        if (!node) return;
-        // left
-        helper(node.left);
+  const helper = (node) => {
+    if (!node) return;
+    // left
+    helper(node.left);
 
-        // read/visit
-        // while reading/visiting the node update newRoot/newTree
-        if (!newRoot) {
-            newRoot = newTree = node;
-        } else {
-            newTree.right = node;
-            newTree = newTree.right;
-            // set left to null to avoid duplication & to create skewed tree
-            node.left = null;
-        }
-
-        // right
-        helper(node.right);
+    // read/visit
+    // while reading/visiting the node update newRoot/newTree
+    if (!newRoot) {
+      newRoot = newTree = node;
+    } else {
+      newTree.right = node;
+      newTree = newTree.right;
+      // set left to null to avoid duplication & to create skewed tree
+      node.left = null;
     }
 
-    helper(root);
-    return newRoot;
+    // right
+    helper(node.right);
+  };
+
+  helper(root);
+  return newRoot;
 };
