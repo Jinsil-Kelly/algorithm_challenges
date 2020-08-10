@@ -3,11 +3,11 @@
 const repeatedNTimes = (A) => {
   const N = A.length / 2;
   let count = 0;
-  A.sort((a, b) => a - b);
+  const arr = [...A].sort((a, b) => a - b);
+  for (let i = 0; i < arr.length; i += 1) {
+    if (count === N - 1) return arr[i];
 
-  for (let i = 0; i < A.length; i += 1) {
-    if (count === N - 1) return A[i];
-    count = A[i] === A[i + 1] ? (count += 1) : 0;
+    count = arr[i] === arr[i + 1] ? (count += 1) : 0;
   }
   return null;
 };

@@ -1,15 +1,15 @@
 // https://leetcode.com/problems/single-number/
 
 const singleNumber = (nums) => {
-  nums.sort((a, b) => a - b);
+  const arr = [...nums].sort((a, b) => a - b);
 
-  while (nums.length >= 1) {
-    if (nums.length === 1) return nums[0];
+  while (arr.length >= 1) {
+    if (arr.length === 1) return arr[0];
 
-    if (nums[0] !== nums[1]) {
-      return nums[0];
+    if (arr[0] !== arr[1]) {
+      return arr[0];
     }
-    nums.splice(0, 2);
+    arr.splice(0, 2);
   }
   return null;
 };
