@@ -2,7 +2,7 @@
 
 const numJewelsInStones = function (J, S) {
   const MAX = 50;
-  if (J < MAX || S < MAX) return 0;
+  if (J > MAX || S > MAX) return 0;
 
   const jArr = [...J];
   const sArr = [...S];
