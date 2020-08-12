@@ -3,10 +3,13 @@
 const catAndMouse = (x, y, z) => {
   const catAfromMouse = Math.abs(z - x);
   const catBfromMouse = Math.abs(z - y);
+  const catA = 'Cat A';
+  const catB = 'Cat B';
+  const mouseC = 'Mouse C';
 
-  if (catAfromMouse === catBfromMouse) return 'Mouse C';
+  if (catAfromMouse === catBfromMouse) return mouseC;
   if (catAfromMouse < catBfromMouse) {
-    return 'Cat A';
+    return catA;
   }
-  return 'Cat B';
+  return catB;
 };
