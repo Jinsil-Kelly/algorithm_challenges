@@ -5,5 +5,6 @@ const designerPdfViewer = (h, word) => {
   const wordHeightArr = [...word].map(
     (char) => h[char.charCodeAt() - ASCIIcodeOfLowerCaseA],
   );
+
   return Math.max.apply(null, wordHeightArr) * word.length;
 };
