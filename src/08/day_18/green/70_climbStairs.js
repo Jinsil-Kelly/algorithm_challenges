@@ -8,7 +8,7 @@ function climbStairs(n) {
   let temporary;
   // 아직 정해지지 않은 일시적인 상태
 
-  for (let stairs = 0; stairs < n; stairs += 0) {
+  for (let stairsStates = 0; stairsStates < n; stairsStates += 1) {
     temporary = previous;
     previous = current;
     current += temporary;
