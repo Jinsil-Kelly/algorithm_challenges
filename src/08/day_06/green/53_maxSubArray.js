@@ -12,4 +12,3 @@ function maxSubArray(nums) {
   }
   return ms;
 }
-// I think study more about kadane's algorithm
